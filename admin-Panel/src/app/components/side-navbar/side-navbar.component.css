@@ -1,15 +1,44 @@
 
 a,
-fa-icon {
+fa-icon, mat-icon {
     font-size: 25px;
     color: #7b7bb4;
 }
 
-img {
+.logo {
     transition: transform .3s ease-in-out;
 }
 
-img:hover {
+.logo:hover {
     transform: rotate(360deg);
 }
 
+.user{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.online{
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    position: relative;
+    bottom: 60px;
+    left: 43px;
+}
+mat-sidenav-container{
+    height: 100%;
+}
+
+
+mat-sidenav-content , mat-sidenav {
+    padding: 20px;
+}
+
+mat-sidenav{
+    background-color: lightsteelblue;
+    /* transform: scaleX(1); */
+    /* translate: ; */
+}

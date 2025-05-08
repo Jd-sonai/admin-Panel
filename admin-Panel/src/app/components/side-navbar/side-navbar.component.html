@@ -1,48 +1,162 @@
-
-<div class="" style="width: 100px;">
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid flex-column">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse flex-column" id="navbarSupportedContent">
-                <a class="navbar-brand mb-4" href="#">
-                    <img src="https://lineone.piniastudio.com/images/app-logo.svg" alt="Bootstrap" width="55" height="55">   
-                </a>
-
-                <a class="navbar-brand mb-4" title="Dashboard" href="#">
-                    <fa-icon [icon]="firstIcon"></fa-icon>
-                </a>
-
-                <a class="navbar-brand mb-4" title="Applications" href="#">
-                    <fa-icon [icon]="secondIcon"></fa-icon>
-                </a>
-
-                <a class="navbar-brand mb-4" title="Pages & Layouts" href="#">
-                    <fa-icon [icon]="thirdIcon"></fa-icon>
-                </a>
-
-                <a class="navbar-brand mb-4" title="Forms" href="#">
-                    <fa-icon [icon]="fourthIcon"></fa-icon>
-                </a>
-
-                <a class="navbar-brand mb-4" title="Components" href="#">
-                    <fa-icon [icon]="fifthIcon"></fa-icon>
-                </a>
-
-                <a class="navbar-brand mb-5" title="Elements" href="#">
-                    <fa-icon [icon]="sixthIcon"></fa-icon>
-                </a>
-
-                <a class="navbar-brand mb-3" title="Settings" href="#">
-                    <fa-icon [icon]="sevenIcon"></fa-icon>
-                </a>
-
-                <a class="navbar-brand mb-3" title="User" href="#">
-                    <fa-icon [icon]="eightIcon" style="font-size: 30px;"></fa-icon>
-                </a>
+<mat-toolbar class="col-12">
+    <mat-toolbar-row>
+        <div class="col-9">
+            <a class="mx-3 mb-4" title="menu" href="#" (click)="sidenav.toggle()">
+                <fa-icon [icon]="menuIcon"></fa-icon>
+            </a>
+            
+        </div>
+        <div class="d-flex">
+            <div>
+                <form class="d-flex">
+                    <button mat-icon-button class="me-lg-2">
+                        <mat-icon>search</mat-icon>
+                    </button>
+                    <input mat-input class="form-control me-2" type="text" placeholder="Search here...">
+                </form>
+            </div>
+            <div>
+                <button mat-icon-button class="me-lg-2">
+                    <mat-icon>brightness_3</mat-icon>
+                </button>
+                <button mat-icon-button class="me-lg-2">
+                    <mat-icon>palette</mat-icon>
+                </button>
+                <button mat-icon-button class="me-lg-2" matBadge="5" matBadgePosition="above after" matBadgeColor="accent" matBadgeSize="large">
+                    <mat-icon>notifications_none</mat-icon>
+                </button>
+                <button mat-icon-button class="me-lg-2">
+                    <mat-icon>category</mat-icon>
+                </button>
             </div>
         </div>
-    </nav>
-</div>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+
+
+<mat-sidenav-container>
+
+    <mat-sidenav #sidenav mode="side" opened="false">
+
+        <h2>Dashboards</h2>
+        <mat-nav-list>
+            <a mat-list-item>
+                ADMIN Analytics
+            </a>
+            <a mat-list-item>
+                Orders
+            </a>
+
+            <hr>
+
+            <a mat-list-item>
+                Cryptocurrency
+            </a>
+            <a mat-list-item>
+                Banking
+            </a>
+            <a mat-list-item>
+                Personal
+            </a>
+            <a mat-list-item>
+                CMS Analytics
+            </a>
+            <a mat-list-item>
+                Influencer
+            </a>
+            <a mat-list-item>
+                Travel
+            </a>
+            <a mat-list-item>
+                Teacher
+            </a>
+            <a mat-list-item>
+                Education
+            </a>
+            <a mat-list-item>
+                Authors
+            </a>
+            <a mat-list-item>
+                Doctors
+            </a>
+            <a mat-list-item>
+                Employees
+            </a>
+            <a mat-list-item>
+                Workspaces
+            </a>
+            <a mat-list-item>
+                Meetings
+            </a>
+            <a mat-list-item>
+                Project Boards
+            </a>
+
+            <hr>
+
+            <a mat-list-item>
+                Widget UI
+            </a>
+            <a mat-list-item>
+                Widget Contacts
+            </a>
+
+
+
+            <!-- <a mat-list-item>
+                <mat-icon matPrefix>whatshot</mat-icon>&nbsp; Calories
+            </a>
+            <a mat-list-item>
+                <mat-icon matSuffix matTooltip="Set Alarm">add_alarm</mat-icon>&nbsp; Alarm
+            </a>
+            <a mat-list-item>
+                <mat-icon matSuffix matTooltip="Add New Goal">add</mat-icon>&nbsp; Add Goal
+            </a> -->
+        </mat-nav-list>
+
+    </mat-sidenav>
+    <mat-sidenav-content>
+
+        <div class="d-flex flex-column">
+            <a class="mb-4" href="#">
+                <img class="logo" src="https://lineone.piniastudio.com/images/app-logo.svg" alt="Bootstrap" width="45" height="45">
+            </a>
+
+            <a class="mx-2 mb-4" title="Dashboard" href="#">
+                <fa-icon [icon]="firstIcon"></fa-icon>
+            </a>
+
+            <a class="mx-2 mb-4" title="Applications" href="#">
+                <fa-icon [icon]="secondIcon"></fa-icon>
+            </a>
+
+            <a class="mx-2 mb-4" title="Pages & Layouts" href="#">
+                <fa-icon [icon]="thirdIcon"></fa-icon>
+            </a>
+
+            <a class="mx-2 mb-4" title="Forms" href="#">
+                <fa-icon [icon]="fourthIcon"></fa-icon>
+            </a>
+
+            <a class="mx-2 mb-4" title="Components" href="#">
+                <fa-icon [icon]="fifthIcon"></fa-icon>
+            </a>
+
+            <a class="mx-2 mb-5" title="Elements" href="#">
+                <fa-icon [icon]="sixthIcon"></fa-icon>
+            </a>
+
+            <a class="mx-2 mb-3" title="Settings" href="#">
+                <fa-icon [icon]="sevenIcon"></fa-icon>
+            </a>
+
+            <a class="mt-2" href="#">
+                <img class="img-fluid user" src="https://lineone.piniastudio.com/images/avatar/avatar-12.jpg" alt="User" width="45" height="45">
+                <span class="bg-success online"></span>
+            </a>
+            
+        </div>
+    </mat-sidenav-content>
+
+</mat-sidenav-container>
